@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李新浩</title>
+    <style>
+        *{ margin: 0; padding: 0; }
+        .cube{
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+            perspective: 1600px;
+        }
+        .cube ul{
+            width: 400px;
+            height: 400px;
+            list-style: none;
+            position: relative;
+            transition: all 3s ease 0s; 
+            /* 3D 属性 */
+            transform-style: preserve-3d;
+        }
+        .cube li{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        .item1{
+            /* 前面 */
+            background: url(./images/66/1.jpg);
+            background-size:400px 400px;
+            transform: translateZ(200px);
+        }
+        .item2{
+            /* 上面 */
+            background: url(./images/66/2.jpg);
+            background-size:400px 400px;
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        .item3{
+            /* 后面 */
+            background: url(./images/66/3.jpg);
+            background-size:400px 400px;
+            transform: rotateX(180deg) translateZ(200px);
+        }
+        .item4{
+            /* 下面 */
+            background: url(./images/66/4.jpg);
+            background-size:400px 400px;
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+        .item5{
+            /* 左面 */
+            background: url(./images/66/5.jpg);
+            background-size:400px 400px;
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+        .item6{
+            /* 右面 */
+            background: url(./images/66/6.jpg);
+            background-size:400px 400px;
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        .cube:hover ul{
+            transform: rotateX(360deg) rotateY(360deg);
+ }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <ul>
+            <li class="item1"></li>
+            <li class="item2"></li>
+            <li class="item3"></li>
+            <li class="item4"></li>
+            <li class="item5"></li>
+            <li class="item6"></li>
+        </ul>
+    </div>
+</body>
+</html>
